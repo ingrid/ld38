@@ -58,6 +58,7 @@ define mc = Character('Princess Mermaid', color="#FF0066")
 define b = Character('Broody McGee', color="#FF0066")
 define cf = Character('Childhood Friend 4 Eva', color="#FF0066")
 define fadeWhite = Fade(1.0, 0.0, 1.0, color="#fff")
+define seahorse_name = 'Kampos'
 
 init:
     transform visible:
@@ -347,7 +348,7 @@ label story1:
 
         cf "I'm not sure I can let you do that, [mc]."
 
-        mc "Oh quit being that stick in the mud.  Besides, I'll have [seahorse name]."
+        mc "Oh quit being that stick in the mud.  Besides, I'll have [seahorse_name]."
 
         cf "Don't you think for a second that I'm going to let you go on your own."
 
