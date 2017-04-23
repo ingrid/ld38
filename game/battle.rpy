@@ -47,6 +47,8 @@ style skill_button_text:
     size 40
     xminimum 200
 
+image enemy seaweed = './images/seaweed.png'
+
 label battle(player, enemy):
     # To start battling, call this label with 2 actor objects: player and enemy.
     # Preparation
@@ -55,6 +57,9 @@ label battle(player, enemy):
     $ _rollback=False
     show screen battle_ui
     "What's that? [enemy.name]?  I'd better do something about it."
+
+    if enemy.name == 'Seaweed':
+        show enemy seaweed
 
     # Main phase
     call _battle(player, enemy) from _call__battle
@@ -67,6 +72,7 @@ label battle(player, enemy):
         "You won"
     elif _return is "escape":
         "You escaped"
+    $ renpy.hide(('enemy',))
     hide screen battle_ui
     $ _rollback=True
     return
