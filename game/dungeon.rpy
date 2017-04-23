@@ -30,10 +30,9 @@ init -1 python:
                         if j in ["1"]:
                             d = Solid("#666", xysize=(12,12))
                         else:
-                            d = Solid("#fff9", xysize=(12,12))
+                            d = Solid("#44BBFF", xysize=(12,12))
                     else:
                         d = Solid("#0000", xysize=(12,12))
-                        #d = Solid("#111", xysize=(12,12))
                     self.add(d,n,m)
             if child.dy==-1:
                 self.add(Text("↑",size=12),child.y,child.x)
