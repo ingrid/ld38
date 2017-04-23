@@ -49,10 +49,10 @@ init -1 python:
             s.x = m*12+12
             s.y = n*12+12
 
-screen move:
+screen move():
     # Screen which shows move buttons and a minimap
     fixed style_group "move":
-        if front1.stage.map[front1.y][front1.x] is not "1":
+        if front1.stage.map[front1.y][front1.x] != "1":
             textbutton "↑" action Return(value=front1)  xcenter .2 ycenter .7
         textbutton "→" action Return(value=turnright) xcenter .3 ycenter .8
         textbutton "↓" action Return(value=turnback) xcenter .2 ycenter .9
