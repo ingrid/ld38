@@ -33,6 +33,7 @@ init -1 python:
                             d = Solid("#fff9", xysize=(12,12))
                     else:
                         d = Solid("#0000", xysize=(12,12))
+                        #d = Solid("#111", xysize=(12,12))
                     self.add(d,n,m)
             if child.dy==-1:
                 self.add(Text("↑",size=12),child.y,child.x)
@@ -69,15 +70,15 @@ style move_button_text:
 # left1, front1, right1
 # left0,  here , right0
 
-image floor = "floor.png"
-image left0 = "left0.png"
-image right0 = Transform("left0.png", xzoom=-1)
-image front1 ="front1.png"
-image left1 = "left1.png"
-image right1 = Transform("left1.png", xzoom=-1)
-image front2 = "front2.png"
-image left2 = "left2.png"
-image right2 = Transform("left2.png", xzoom=-1)
+image floor = "images/floor.png"
+image left0 = "images/left0.png"
+image right0 = Transform("images/left0.png", xzoom=-1)
+image front1 ="images/front1.png"
+image left1 = "images/left1.png"
+image right1 = Transform("images/left1.png", xzoom=-1)
+image front2 = "images/front2.png"
+image left2 = "images/left2.png"
+image right2 = Transform("images/left2.png", xzoom=-1)
 
 label dungeon:
     # To start exploring, call or jump to this label
