@@ -116,6 +116,8 @@ label dungeon:
         # Check events. If it happens, call a label or jump out to a label.
         if here.stage.enemy is not None and renpy.random.random()< .2:
             call battle(player=hero, enemy=here.stage.enemy) from _call_battle
+        if hero.hp <= 0:
+            call packed_a_snack(player=hero) from _call_events
 
         # Otherwise, call the move screen
         $ renpy.block_rollback()

@@ -23,6 +23,10 @@ init -1 python:
                 target.hp -= self.skill.power
                 narrator ("{} got {} damage".format(target.name, self.skill.power))
 
+        def heal(self, health):
+            self.hp = min(self.hp + health, self.max_hp)
+
+
 screen battle_ui:
     # Screen which shows battle status
     use battle_frame(char=player, position=(.95,.05))
